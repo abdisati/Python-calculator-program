@@ -1,6 +1,11 @@
 from tkinter import *
 def button_press(num):
-    pass
+    global equation_text
+    
+    equation_text = equation_text + str(num)
+    
+    
+    equation_label.set(equation_text)
 
 
 def equals():
@@ -91,7 +96,7 @@ divide= Button(frame,text='.', height=4,width=9,font=35, command= lambda: button
 
 divide.grid(row=3,column=1)
 
-clear= Button(window,text='clear', height=4,width=9,font=35, command= clear)
+clear= Button(window,text='clear', height=4,width=12,font=35, command= clear)
 
 clear.pack()
 
